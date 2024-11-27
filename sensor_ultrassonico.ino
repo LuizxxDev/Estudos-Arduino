@@ -1,13 +1,10 @@
-// Define o numero das portas
 const int trigPin = 9;
 const int echoPin = 8;
 const int buzzer = 3;
 
-// define as variaveis
 long duration;
 int distance;
 int safetyDistance;
-
 
 void setup() {
 pinMode(trigPin, OUTPUT); 
@@ -27,7 +24,6 @@ digitalWrite(trigPin, LOW);
 
 duration = pulseIn(echoPin, HIGH);
 
-// Calcula a distancia
 distance= duration*0.034/2;
 
 safetyDistance = distance;
